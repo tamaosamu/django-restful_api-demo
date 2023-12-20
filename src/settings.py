@@ -38,9 +38,7 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "rest_framework",
-    "apps.module1",
-    "apps.aa_1127",
-    "apps.demo"
+    "batch"
 ]
 
 MIDDLEWARE = [
@@ -78,10 +76,10 @@ WSGI_APPLICATION = "src.wsgi.application"
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
 DATABASES = {
-    # 'sqlite3': {
-    #     'ENGINE': 'django.db.backends.sqlite3',
-    #     'NAME': BASE_DIR / 'db.sqlite3',
-    # },
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+    },
     # "postgres": {
     #     "ENGINE": "django.db.backends.postgresql",
     #     "OPTIONS": {
@@ -89,14 +87,14 @@ DATABASES = {
     #         "passfile": "../my_pgpass",
     #     },
     # },
-    "default": {
-        "ENGINE": "django.db.backends.postgresql_psycopg2",  # 数据库引擎
-        "NAME": "demo",  # 数据库名，Django不会帮你创建，需要自己进入数据库创建。
-        "USER": "haruki",  # 设置的数据库用户名
-        "PASSWORD": "",  # 设置的密码
-        "HOST": "localhost",  # 本地主机或数据库服务器的ip
-        "PORT": "5432",  # 数据库使用的端口
-    }
+    # "default": {
+    #     "ENGINE": "django.db.backends.postgresql_psycopg2",  # 数据库引擎
+    #     "NAME": "demo",  # 数据库名，Django不会帮你创建，需要自己进入数据库创建。
+    #     "USER": "haruki",  # 设置的数据库用户名
+    #     "PASSWORD": "",  # 设置的密码
+    #     "HOST": "localhost",  # 本地主机或数据库服务器的ip
+    #     "PORT": "5432",  # 数据库使用的端口
+    # }
 }
 
 
